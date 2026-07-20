@@ -1,0 +1,27 @@
+<section class="featured-projects">
+
+    <app-container>
+
+        <app-section-title
+            [content]="sectionTitle">
+        </app-section-title>
+
+        <app-divider
+            variant="short">
+        </app-divider>
+
+        <div class="projects-grid">
+
+            @for(project of projects; track project.id){
+
+                <app-project-card
+                    [project]="project">
+                </app-project-card>
+
+            }
+
+        </div>
+
+    </app-container>
+
+</section>

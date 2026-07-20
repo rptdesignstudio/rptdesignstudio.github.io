@@ -1,0 +1,48 @@
+<a
+
+class="project-card"
+
+[routerLink]="['/projects', project().slug]">
+
+
+   <div class="project-image">
+
+
+    <app-image-frame
+
+        variant="zoom"
+
+        [src]="project().coverImage"
+
+        [alt]="project().title">
+
+    </app-image-frame>
+
+
+</div>
+
+    <div class="project-content">
+
+        <p class="project-category">
+            {{ project().category }}
+        </p>
+
+        <h3>
+            {{ project().title }}
+        </h3>
+
+        <p class="subtitle">
+            {{ project().subtitle }}
+        </p>
+
+        <div class="project-meta">
+
+            <span>{{ project().location }}</span>
+
+            <span>{{ project().year }}</span>
+
+        </div>
+
+    </div>
+
+</a>

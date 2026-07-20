@@ -1,0 +1,69 @@
+.project-services {
+
+    padding: 8rem 0;
+
+}
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 6rem;
+
+}
+
+.eyebrow {
+
+    color: #C5A46D;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 2rem;
+
+    font-size: .9rem;
+
+}
+
+.column ul {
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+}
+
+.column li {
+
+    list-style: none;
+
+    padding: 1.5rem 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    font-size: 1.15rem;
+
+    transition: all .3s ease;
+
+}
+
+.column li:hover {
+
+    padding-left: 1rem;
+
+    color: #C5A46D;
+
+}
+
+@media (max-width:992px){
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+        gap:4rem;
+
+    }
+
+}

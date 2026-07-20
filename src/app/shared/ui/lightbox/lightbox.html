@@ -1,0 +1,49 @@
+<div
+    class="overlay"
+    (click)="close()">
+
+    <div
+        class="lightbox-content"
+        (click)="$event.stopPropagation()">
+
+        <button
+            class="close"
+            (click)="close()">
+
+            ✕
+
+        </button>
+
+        <button
+            class="previous"
+            (click)="previous()"
+            [disabled]="currentIndex() === 0">
+
+            ❮
+
+        </button>
+
+        <img
+            [src]="currentImage()"
+            alt="Project Image">
+
+        <button
+            class="next"
+            (click)="next()"
+            [disabled]="currentIndex() === images().length - 1">
+
+            ❯
+
+        </button>
+
+        <div class="counter">
+
+            {{ currentIndex() + 1 }}
+            /
+            {{ images().length }}
+
+        </div>
+
+    </div>
+
+</div>

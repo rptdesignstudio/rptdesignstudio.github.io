@@ -1,0 +1,10 @@
+<div
+    class="container"
+    [class.small]="size() === 'small'"
+    [class.medium]="size() === 'medium'"
+    [class.large]="size() === 'large'"
+    [class.full]="size() === 'full'">
+
+    <ng-content />
+
+</div>

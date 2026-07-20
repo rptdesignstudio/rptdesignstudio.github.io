@@ -1,0 +1,57 @@
+<section class="project-gallery">
+
+    <app-container>
+
+        <div class="gallery-header">
+
+            <p class="eyebrow">
+
+                Gallery
+
+            </p>
+
+            <h2>
+
+                Project Gallery
+
+            </h2>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            @for(image of project().gallery; track image; let i = $index){
+
+    <div
+
+        class="gallery-item"
+
+        [class.large]="i % 3 === 0"
+
+        (click)="open(i)">
+
+        <img
+
+            [src]="image"
+
+            [alt]="project().title">
+
+    </div>
+
+}
+
+        </div>
+
+    </app-container>
+
+</section>
+
+@if (lightboxVisible()) {
+
+    <app-lightbox
+        [images]="project().gallery"
+        [startIndex]="selectedIndex()"
+        (closed)="close()">
+    </app-lightbox>
+
+}

@@ -1,0 +1,48 @@
+.project-intro {
+
+    padding: 7rem 0;
+
+}
+
+.intro-wrapper {
+
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+.category {
+
+    color: #c5a46d;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+
+}
+
+h1 {
+
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.05;
+    margin-bottom: .75rem;
+
+}
+
+h2 {
+
+    color: #999;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+
+}
+
+.description {
+
+    max-width: 760px;
+    font-size: 1.15rem;
+    line-height: 2;
+    color: #b8b8b8;
+
+}

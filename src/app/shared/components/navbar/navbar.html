@@ -1,0 +1,47 @@
+<header
+    class="navbar"
+    [class.scrolled]="isScrolled">
+
+    <app-container>
+
+        <div class="navbar-content">
+
+            <a
+                routerLink="/"
+                class="logo">
+
+                <span>RPT</span>
+                Design Studio
+
+            </a>
+
+            <nav>
+
+                <ul>
+
+                    @for(item of navigationItems; track item.route){
+
+                        <li>
+
+                            <a
+                                [routerLink]="item.route"
+                                routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }">
+
+                                {{ item.label }}
+
+                            </a>
+
+                        </li>
+
+                    }
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </app-container>
+
+</header>

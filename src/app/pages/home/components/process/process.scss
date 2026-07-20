@@ -1,0 +1,69 @@
+.process-list {
+
+    margin-top: 4rem;
+
+}
+
+.process-item {
+
+    display: grid;
+
+    grid-template-columns: 120px 1fr;
+
+    gap: 2rem;
+
+    padding: 3rem 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    transition: all .4s ease;
+
+}
+
+.process-item:hover {
+
+    padding-left: 1rem;
+
+    border-color: #c5a46d;
+
+}
+
+.step-number {
+
+    font-size: 3rem;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    color: #c5a46d;
+
+}
+
+.step-content h3 {
+
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+
+}
+
+.step-content p {
+
+    color: #b5b5b5;
+
+    line-height: 1.8;
+
+    max-width: 650px;
+
+}
+
+@media (max-width: 768px){
+
+    .process-item{
+
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+
+    }
+
+}

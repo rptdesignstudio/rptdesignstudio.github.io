@@ -1,0 +1,15 @@
+@use './colors' as *;
+
+body{
+
+    background:$black;
+
+    color:$white;
+
+    overflow-x:hidden;
+}
+main {
+
+    padding-top: 100px;
+
+}

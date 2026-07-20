@@ -1,0 +1,47 @@
+<section class="process section">
+
+    <app-container>
+
+        <app-section-title
+            [content]="sectionTitle">
+        </app-section-title>
+
+        <app-divider variant="short"></app-divider>
+
+        <div class="process-list">
+
+            @for(step of process; track step.step){
+
+                <div class="process-item">
+
+                    <div class="step-number">
+
+                        {{step.step}}
+
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+
+                            {{step.title}}
+
+                        </h3>
+
+                        <p>
+
+                            {{step.description}}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            }
+
+        </div>
+
+    </app-container>
+
+</section>

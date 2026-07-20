@@ -1,0 +1,71 @@
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:2rem;
+
+    margin-top:4rem;
+
+}
+
+.service-card{
+
+    padding:3rem 2rem;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s ease;
+
+    background:#111;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#c5a46d;
+
+}
+
+.number{
+
+    display:block;
+
+    color:#c5a46d;
+
+    font-size:.85rem;
+
+    letter-spacing:3px;
+
+    margin-bottom:2rem;
+
+}
+
+.service-card h3{
+
+    font-size:1.8rem;
+
+    margin-bottom:1.5rem;
+
+}
+
+.service-card p{
+
+    color:#b5b5b5;
+
+    line-height:1.8;
+
+}
+
+@media(max-width:992px){
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

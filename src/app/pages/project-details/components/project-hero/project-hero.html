@@ -1,0 +1,40 @@
+<section class="project-hero">
+
+    <img
+        class="hero-image"
+        [src]="project().coverImage"
+        [alt]="project().title">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="category">
+
+            {{ project().category }}
+
+        </p>
+
+        <h1>
+
+            {{ project().title }}
+
+        </h1>
+
+        <h2>
+
+            {{ project().subtitle }}
+
+        </h2>
+
+    </div>
+
+    <div class="scroll-indicator">
+
+        <span></span>
+
+        Scroll
+
+    </div>
+
+</section>

@@ -1,0 +1,39 @@
+<section class="services section">
+
+    <app-container>
+
+        <app-section-title
+            [content]="sectionTitle">
+        </app-section-title>
+
+        <app-divider
+            variant="short">
+        </app-divider>
+
+        <div class="services-grid">
+
+            @for(service of services; track service.id){
+
+                <div class="service-card">
+
+                    <span class="number">
+                        0{{service.id}}
+                    </span>
+
+                    <h3>
+                        {{service.title}}
+                    </h3>
+
+                    <p>
+                        {{service.description}}
+                    </p>
+
+                </div>
+
+            }
+
+        </div>
+
+    </app-container>
+
+</section>

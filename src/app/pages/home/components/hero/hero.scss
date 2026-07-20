@@ -1,0 +1,269 @@
+@use '../../../../../styles/colors' as *;
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+.hero__background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url('/assets/images/background/hero.jpg');
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.15);
+
+    animation: heroZoom 12s ease forwards;
+
+}
+
+.hero__overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(11,11,11,.85) 10%,
+        rgba(11,11,11,.45) 55%,
+        rgba(11,11,11,.2) 100%
+    );
+
+}
+
+.hero__content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 720px;
+
+    padding-top: 4rem;
+
+}
+
+.hero h1 {
+
+    font-size: clamp(4rem,8vw,7rem);
+
+    line-height: .95;
+
+    margin: 1rem 0;
+
+}
+
+.hero__subtitle {
+
+    color: #c5a46d;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+}
+
+.hero__description {
+
+    font-size: 1.2rem;
+
+    color: #d0d0d0;
+
+    max-width: 500px;
+
+    line-height: 1.8;
+
+    margin: 2rem 0;
+
+}
+
+.hero__actions {
+
+    display: flex;
+
+    gap: 1.5rem;
+
+    margin-top: 2rem;
+
+}
+
+
+h1{
+
+font-size:clamp(60px,8vw,120px);
+
+line-height:.9;
+
+color:$white;
+
+font-weight:500;
+
+
+}
+
+
+.btn{
+
+
+padding:16px 40px;
+
+background:$gold;
+
+color:$black;
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+font-size:13px;
+
+
+}
+
+
+
+.btn-outline{
+
+
+background:transparent;
+
+color:$white;
+
+border:1px solid rgba(255,255,255,.4);
+
+
+}
+
+
+
+.scroll{
+
+
+position:absolute;
+
+bottom:40px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+color:white;
+
+font-size:12px;
+
+letter-spacing:4px;
+
+
+span{
+
+display:block;
+
+height:50px;
+
+width:1px;
+
+background:white;
+
+margin:auto;
+
+margin-bottom:15px;
+
+}
+
+
+}
+.scroll-indicator {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    right: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    color: #ffffff;
+
+}
+
+.mouse {
+
+    width: 28px;
+
+    height: 46px;
+
+    border: 1px solid rgba(255,255,255,.5);
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 8px;
+
+}
+
+.mouse span {
+
+    width: 4px;
+
+    height: 8px;
+
+    background: white;
+
+    border-radius: 2px;
+
+    animation: scrollMouse 2s infinite;
+
+}
+
+@keyframes scrollMouse {
+
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(14px);
+        opacity: 0;
+    }
+
+}
+
+@keyframes heroZoom {
+
+    from {
+
+        transform: scale(1.15);
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+    }
+
+}

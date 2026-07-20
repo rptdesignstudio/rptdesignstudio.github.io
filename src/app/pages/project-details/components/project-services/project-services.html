@@ -1,0 +1,55 @@
+<section class="project-services">
+
+    <app-container>
+
+        <div class="services-grid">
+
+            <div class="column">
+
+                <p class="eyebrow">
+                    Services
+                </p>
+
+                <ul>
+
+                    @for(service of project().services; track service){
+
+                        <li>
+
+                            {{ service }}
+
+                        </li>
+
+                    }
+
+                </ul>
+
+            </div>
+
+            <div class="column">
+
+                <p class="eyebrow">
+                    Materials
+                </p>
+
+                <ul>
+
+                    @for(material of project().materials; track material){
+
+                        <li>
+
+                            {{ material }}
+
+                        </li>
+
+                    }
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </app-container>
+
+</section>

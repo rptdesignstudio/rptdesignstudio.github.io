@@ -1,3 +1,42 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { Home } from './pages/home/home';
+import { Projects } from './pages/projects/projects';
+import { About } from './pages/about/about';
+import { Contact } from './pages/contact/contact';
+
+export const routes: Routes = [
+
+    {
+        path:'',
+        component:Home
+    },
+
+    {
+        path:'projects',
+        component:Projects
+    },
+
+    {
+        path:'projects/:slug',
+        loadComponent: () =>
+            import('./pages/project-details/project-details')
+                .then(m => m.ProjectDetailsComponent)
+    },
+
+    {
+        path:'about',
+        component:About
+    },
+
+    {
+        path:'contact',
+        component:Contact
+    },
+
+    {
+        path:'**',
+        redirectTo:''
+    }
+
+];

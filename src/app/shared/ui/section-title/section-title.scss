@@ -1,0 +1,93 @@
+:host {
+
+    display: block;
+
+    margin-bottom: 4rem;
+
+}
+
+.section-title {
+
+    max-width: 900px;
+
+}
+
+.eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    color: #C5A46D;
+
+    font-size: .9rem;
+
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+}
+
+h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+
+    line-height: 1.1;
+
+    font-weight: 600;
+
+    color: #F8F8F8;
+
+    max-width: 700px;
+
+}
+
+.subtitle {
+
+    margin-top: 1.5rem;
+
+    max-width: 650px;
+
+    color: #B8B8B8;
+
+    font-size: 1.1rem;
+
+    line-height: 1.9;
+
+}
+
+.center {
+
+    text-align: center;
+
+    margin-inline: auto;
+
+}
+
+.center h2,
+
+.center .subtitle {
+
+    margin-inline: auto;
+
+}
+
+@media (max-width:768px) {
+
+    :host {
+
+        margin-bottom: 3rem;
+
+    }
+
+    h2 {
+
+        font-size: 2.5rem;
+
+    }
+
+}
