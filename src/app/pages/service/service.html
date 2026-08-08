@@ -1,1 +1,76 @@
-<p>services works!</p>
+<section class="services-page section">
+
+    <app-container>
+
+        <div class="services-page__header">
+
+            <app-section-title
+                [content]="sectionTitle">
+            </app-section-title>
+
+            <app-divider
+                variant="short">
+            </app-divider>
+
+        </div>
+
+        <div class="services-list">
+
+            @for(service of services; track service.id){
+
+                <article class="service-item">
+
+                    <div class="service-number">
+                        0{{ service.id }}
+                    </div>
+
+                    <div class="service-content">
+
+                        <h2>
+                            {{ service.title }}
+                        </h2>
+
+                        <p>
+                            {{ service.description }}
+                        </p>
+
+                    </div>
+
+                </article>
+
+            }
+
+        </div>
+
+        <section class="services-cta">
+
+            <div class="services-cta__content">
+
+                <p class="services-cta__eyebrow">
+                    Have a project in mind?
+                </p>
+
+                <h2>
+                    Let’s create something thoughtful together.
+                </h2>
+
+                <p class="services-cta__description">
+                    Tell us about your project, your ideas and what you want
+                    the space to become.
+                </p>
+
+                <a
+                    class="services-cta__button"
+                    routerLink="/contact">
+
+                    Start a Conversation
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </app-container>
+
+</section>

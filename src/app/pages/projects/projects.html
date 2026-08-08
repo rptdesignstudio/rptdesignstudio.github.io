@@ -12,36 +12,41 @@
 
         <div class="projects-toolbar">
 
-            <div class="search-box">
+    <div class="projects-count">
 
-                <input
-                    type="text"
-                    placeholder="Search by project name or location..."
-                    (input)="onSearch($event)">
+        <span>{{ filteredProjects().length }}</span>
 
-            </div>
+        {{ filteredProjects().length === 1 ? 'Project' : 'Projects' }}
 
-            <div class="category-filter">
+    </div>
 
-                @for(category of categories; track category){
+    <div class="search-box">
 
-                    <button
+        <input
+            type="text"
+            placeholder="Search by project name or location..."
+            (input)="onSearch($event)">
 
-                        type="button"
+    </div>
 
-                        [class.active]="selectedCategory() === category"
+    <div class="category-filter">
 
-                        (click)="selectCategory(category)">
+        @for(category of categories; track category){
 
-                        {{ category }}
+            <button
+                type="button"
+                [class.active]="selectedCategory() === category"
+                (click)="selectCategory(category)">
 
-                    </button>
+                {{ category }}
 
-                }
+            </button>
 
-            </div>
+        }
 
-        </div>
+    </div>
+
+</div>
 
         @if(filteredProjects().length){
 

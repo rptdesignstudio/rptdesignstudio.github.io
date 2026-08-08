@@ -3,6 +3,11 @@ import { NavigationItem } from '../models/navigation-item.model';
 export const NAVIGATION_ITEMS: NavigationItem[] = [
 
   {
+        label: 'Home',
+        route: '/'
+  },
+
+  {
     label: 'Projects',
     route: '/projects'
   },

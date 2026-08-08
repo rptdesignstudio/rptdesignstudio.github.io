@@ -1,0 +1,438 @@
+.about-page {
+
+    padding-block: 5rem 8rem;
+
+}
+
+
+/* ============================= */
+/* Header */
+/* ============================= */
+
+.about-page__header {
+
+    margin-bottom: 4rem;
+
+}
+
+.about-page__header app-section-title {
+
+    margin-bottom: 0;
+
+}
+
+.about-page__header app-divider {
+
+    display: none;
+
+}
+
+
+/* ============================= */
+/* Shared Eyebrow */
+/* ============================= */
+
+.eyebrow {
+
+    margin-bottom: 1rem;
+
+    color: #C5A46D;
+
+    font-size: .85rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* ============================= */
+/* Story */
+/* ============================= */
+
+.about-story {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+
+    gap: 6rem;
+
+    padding: 5rem 0;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+}
+
+.about-story__title {
+
+    max-width: 560px;
+
+}
+
+.about-story__title h2 {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+
+    font-weight: 500;
+
+    line-height: 1.08;
+
+    color: #F8F8F8;
+
+}
+
+.about-story__content {
+
+    max-width: 700px;
+
+}
+
+.about-story__content p {
+
+    margin: 0 0 1.5rem;
+
+    color: #B8B8B8;
+
+    font-size: 1.05rem;
+
+    line-height: 1.95;
+
+}
+
+.about-story__content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* ============================= */
+/* Philosophy */
+/* ============================= */
+
+.about-philosophy {
+
+    display: grid;
+
+    grid-template-columns: .6fr 1.4fr;
+
+    gap: 5rem;
+
+    padding: 5rem 0;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+}
+
+.about-philosophy__content {
+
+    max-width: 850px;
+
+}
+
+.about-philosophy__content h2 {
+
+    margin: 0 0 1.5rem;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+
+    font-weight: 500;
+
+    line-height: 1.08;
+
+    color: #F8F8F8;
+
+}
+
+.about-philosophy__content p {
+
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #B8B8B8;
+
+    font-size: 1.05rem;
+
+    line-height: 1.95;
+
+}
+
+
+/* ============================= */
+/* Values */
+/* ============================= */
+
+.about-values {
+
+    padding: 5rem 0 2rem;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+}
+
+.about-values__header {
+
+    max-width: 720px;
+
+    margin-bottom: 3rem;
+
+}
+
+.about-values__header h2 {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2.75rem, 5vw, 4.25rem);
+
+    font-weight: 500;
+
+    line-height: 1.08;
+
+    color: #F8F8F8;
+
+}
+
+.values-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1.5rem;
+
+}
+
+.value-card {
+
+    padding: 2.5rem;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: #111;
+
+}
+
+.value-card h3 {
+
+    margin: 0 0 1rem;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    font-weight: 500;
+
+    color: #F8F8F8;
+
+}
+
+.value-card p {
+
+    margin: 0;
+
+    color: #AFAFAF;
+
+    line-height: 1.8;
+
+}
+
+
+/* ============================= */
+/* Tablet */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+    .about-story,
+    .about-philosophy {
+
+        grid-template-columns: 1fr;
+
+        gap: 2.5rem;
+
+    }
+
+    .about-story,
+    .about-philosophy,
+    .about-values {
+
+        padding-block: 4rem;
+
+    }
+
+}
+
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width: 640px) {
+
+    .about-page {
+
+        padding-block: 4rem 5rem;
+
+    }
+
+    .about-page__header {
+
+        margin-bottom: 3rem;
+
+    }
+
+    .about-story,
+    .about-philosophy {
+
+        gap: 2rem;
+
+        padding-block: 3.5rem;
+
+    }
+
+    .about-values {
+
+        padding-block: 3.5rem 1rem;
+
+    }
+
+    .values-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .value-card {
+
+        padding: 2rem;
+
+    }
+
+}
+
+/* ============================= */
+/* CTA */
+/* ============================= */
+
+.about-cta {
+
+    padding: 5rem 0 1rem;
+
+    margin-top: 4rem;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+}
+
+.about-cta__content {
+
+    max-width: 850px;
+
+}
+
+.about-cta h2 {
+
+    max-width: 760px;
+
+    margin: 0 0 1.5rem;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+
+    font-weight: 500;
+
+    line-height: 1.08;
+
+    color: #F8F8F8;
+
+}
+
+.about-cta p {
+
+    max-width: 650px;
+
+    margin: 0 0 2.5rem;
+
+    color: #B8B8B8;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+}
+
+.about-cta p.eyebrow {
+
+    margin-bottom: 1rem;
+
+    color: #C5A46D;
+
+    font-size: .85rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+}
+
+.about-cta__button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 54px;
+
+    padding: 0 2rem;
+
+    border: 1px solid #C5A46D;
+
+    border-radius: 999px;
+
+    color: #C5A46D;
+
+    text-decoration: none;
+
+    font-size: .9rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: .3s ease;
+
+}
+
+.about-cta__button:hover {
+
+    background: #C5A46D;
+
+    color: #0B0B0B;
+
+}
+
+@media (max-width: 640px) {
+
+    .about-cta {
+
+        padding-top: 4rem;
+
+        margin-top: 3rem;
+
+    }
+
+}

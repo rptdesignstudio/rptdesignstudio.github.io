@@ -1,1 +1,138 @@
-<p>about works!</p>
+<section class="about-page section">
+
+    <app-container>
+
+        <div class="about-page__header">
+
+            <app-section-title
+                [content]="sectionTitle">
+            </app-section-title>
+
+            <app-divider
+                variant="short">
+            </app-divider>
+
+        </div>
+
+        <section class="about-story">
+
+            <div class="about-story__title">
+
+                <p class="eyebrow">
+                    Our Story
+                </p>
+
+                <h2>
+                    {{ about.storyTitle }}
+                </h2>
+
+            </div>
+
+            <div class="about-story__content">
+
+                @for(paragraph of about.story; track paragraph){
+
+                    <p>
+                        {{ paragraph }}
+                    </p>
+
+                }
+
+            </div>
+
+        </section>
+
+        <section class="about-philosophy">
+
+            <div class="about-philosophy__label">
+
+                <p class="eyebrow">
+                    Our Philosophy
+                </p>
+
+            </div>
+
+            <div class="about-philosophy__content">
+
+                <h2>
+                    {{ about.philosophyTitle }}
+                </h2>
+
+                <p>
+                    {{ about.philosophy }}
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="about-values">
+
+            <div class="about-values__header">
+
+                <p class="eyebrow">
+                    What Guides Us
+                </p>
+
+                <h2>
+                    Principles behind every project
+                </h2>
+
+            </div>
+
+            <div class="values-grid">
+
+                @for(value of about.values; track value.title){
+
+                    <article class="value-card">
+
+                        <h3>
+                            {{ value.title }}
+                        </h3>
+
+                        <p>
+                            {{ value.description }}
+                        </p>
+
+                    </article>
+
+                }
+
+            </div>
+
+        </section>
+
+        <section class="about-cta">
+
+            <div class="about-cta__content">
+
+                <p class="eyebrow">
+                    Work With Us
+                </p>
+
+                <h2>
+                    Have a space in mind?
+                    Let’s shape it together.
+                </h2>
+
+                <p>
+                    Whether you are planning a residence, interior, commercial space
+                    or an early-stage concept, we would be happy to understand your
+                    vision and explore what is possible.
+                </p>
+
+                <a
+                    class="about-cta__button"
+                    routerLink="/contact">
+
+                    Start a Conversation
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </app-container>
+
+</section>

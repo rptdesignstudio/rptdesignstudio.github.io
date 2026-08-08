@@ -10,23 +10,58 @@
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
+
+    justify-content: space-between;
 
     gap: 2rem;
 
-    flex-wrap: wrap;
+    margin-top: 3rem;
 
-    margin-block: 3rem;
+    margin-bottom: 4rem;
+
+    flex-wrap: wrap;
 
 }
 
+/* ============================= */
+/* Project Count */
+/* ============================= */
+
+.projects-count {
+
+    flex: 0 0 auto;
+
+    color: #888;
+
+    font-size: .9rem;
+
+    letter-spacing: .5px;
+
+}
+
+.projects-count span {
+
+    color: #C5A46D;
+
+    font-size: 1.15rem;
+
+    font-weight: 600;
+
+    margin-right: .35rem;
+
+}
+
+
+/* ============================= */
+/* Search */
+/* ============================= */
+
 .search-box {
 
-    flex: 1;
+    flex: 1 1 320px;
 
-    min-width: 280px;
+    max-width: 480px;
 
 }
 
@@ -34,29 +69,27 @@
 
     width: 100%;
 
-    padding: 1rem 1.25rem;
+    min-height: 52px;
 
-    background: #151515;
+    padding: 0 1.25rem;
 
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
 
     border-radius: 999px;
 
-    color: white;
+    background: #151515;
+
+    color: #f5f5f5;
+
+    font-family: inherit;
 
     font-size: .95rem;
 
-    transition: .3s ease;
+    transition:
 
-}
+        border-color .3s ease,
 
-.search-box input:focus {
-
-    outline: none;
-
-    border-color: #C5A46D;
-
-    box-shadow: 0 0 0 3px rgba(197,164,109,.15);
+        box-shadow .3s ease;
 
 }
 
@@ -66,41 +99,76 @@
 
 }
 
+.search-box input:focus {
+
+    outline: none;
+
+    border-color: #C5A46D;
+
+    box-shadow:
+
+        0 0 0 3px rgba(197,164,109,.12);
+
+}
+
+
+/* ============================= */
+/* Category Filter */
+/* ============================= */
+
 .category-filter {
 
     display: flex;
 
-    flex-wrap: wrap;
+    align-items: center;
 
-    gap: .75rem;
+    justify-content: flex-end;
+
+    gap: .6rem;
+
+    flex-wrap: wrap;
 
 }
 
 .category-filter button {
 
-    padding: .75rem 1.4rem;
+    min-height: 44px;
+
+    padding: 0 1.25rem;
+
+    border: 1px solid rgba(255,255,255,.10);
 
     border-radius: 999px;
 
-    border: 1px solid rgba(255,255,255,.08);
-
     background: transparent;
 
-    color: #d5d5d5;
+    color: #b8b8b8;
+
+    font-family: inherit;
+
+    font-size: .9rem;
 
     cursor: pointer;
 
-    transition: .3s ease;
+    transition:
 
-    font-size: .9rem;
+        color .3s ease,
+
+        background .3s ease,
+
+        border-color .3s ease,
+
+        transform .3s ease;
 
 }
 
 .category-filter button:hover {
 
+    color: #C5A46D;
+
     border-color: #C5A46D;
 
-    color: #C5A46D;
+    transform: translateY(-2px);
 
 }
 
@@ -108,29 +176,47 @@
 
     background: #C5A46D;
 
-    color: #111;
-
     border-color: #C5A46D;
 
+    color: #111;
+
 }
+
+
+/* ============================= */
+/* Projects Grid */
+/* ============================= */
 
 .projects-grid {
 
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(360px,1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 2rem;
 
-    margin-top: 3rem;
-
 }
+
+
+/* ============================= */
+/* Empty State */
+/* ============================= */
 
 .empty-state {
 
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
     text-align: center;
 
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
 
 }
 
@@ -144,29 +230,96 @@
 
     max-width: 500px;
 
-    margin-inline: auto;
+    margin: 0 auto;
 
 }
 
-@media (max-width:768px){
 
-    .projects-toolbar{
+/* ============================= */
+/* Tablet */
+/* ============================= */
 
-        flex-direction: column;
+@media (max-width: 1100px) {
+
+    .projects-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .projects-page {
+
+        padding-block: 5rem 6rem;
+
+    }
+
+    .projects-toolbar {
 
         align-items: stretch;
 
+        flex-direction: column;
+
+        margin-top: 2.5rem;
+
+        margin-bottom: 3rem;
+
     }
 
-    .category-filter{
+    .search-box {
 
-        justify-content: center;
+        max-width: none;
 
     }
 
-    .projects-grid{
+    .category-filter {
 
-        grid-template-columns:1fr;
+        justify-content: flex-start;
+
+    }
+
+    .projects-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+
+    }
+
+    .projects-count {
+
+    order: -1;
+
+}
+
+}
+
+
+/* ============================= */
+/* Small Mobile */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+    .category-filter {
+
+        gap: .5rem;
+
+    }
+
+    .category-filter button {
+
+        padding-inline: 1rem;
+
+        font-size: .85rem;
 
     }
 

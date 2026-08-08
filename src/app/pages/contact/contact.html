@@ -1,1 +1,261 @@
-<p>contact works!</p>
+<section class="contact-page section">
+
+    <app-container>
+
+        <div class="contact-page__header">
+
+            <app-section-title
+                [content]="sectionTitle">
+            </app-section-title>
+
+        </div>
+
+        <div class="contact-layout">
+
+            <aside class="contact-info">
+
+                <p class="eyebrow">
+                    Studio Details
+                </p>
+
+                <div class="contact-info__list">
+
+                    @for(item of contactInfo; track item.label){
+
+                        <div class="contact-info__item">
+
+                            <span>
+                                {{ item.label }}
+                            </span>
+
+                            <p>
+                                {{ item.value }}
+                            </p>
+
+                        </div>
+
+                    }
+
+                </div>
+
+            </aside>
+
+            <div class="contact-form-wrapper">
+
+                @if(!submitted){
+
+                    <form
+                        class="contact-form"
+                        [formGroup]="contactForm"
+                        (ngSubmit)="submit()">
+
+                        <div class="form-row">
+
+                            <div class="form-field">
+
+                                <label for="name">
+                                    Name *
+                                </label>
+
+                                <input
+                                    id="name"
+                                    type="text"
+                                    formControlName="name"
+                                    placeholder="Your name">
+
+                                @if(
+                                    contactForm.controls.name.touched &&
+                                    contactForm.controls.name.invalid
+                                ){
+
+                                    <small class="error">
+                                        Please enter your name.
+                                    </small>
+
+                                }
+
+                            </div>
+
+                            <div class="form-field">
+
+                                <label for="email">
+                                    Email *
+                                </label>
+
+                                <input
+                                    id="email"
+                                    type="email"
+                                    formControlName="email"
+                                    placeholder="you@example.com">
+
+                                @if(
+                                    contactForm.controls.email.touched &&
+                                    contactForm.controls.email.invalid
+                                ){
+
+                                    <small class="error">
+                                        Please enter a valid email address.
+                                    </small>
+
+                                }
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-field">
+
+                                <label for="phone">
+                                    Phone
+                                </label>
+
+                                <input
+                                    id="phone"
+                                    type="tel"
+                                    formControlName="phone"
+                                    placeholder="+91">
+
+                            </div>
+
+                            <div class="form-field">
+
+                                <label for="projectType">
+                                    Project Type *
+                                </label>
+
+                                <select
+                                    id="projectType"
+                                    formControlName="projectType">
+
+                                    <option value="">
+                                        Select project type
+                                    </option>
+
+                                    <option value="Residential">
+                                        Residential
+                                    </option>
+
+                                    <option value="Commercial">
+                                        Commercial
+                                    </option>
+
+                                    <option value="Interior">
+                                        Interior
+                                    </option>
+
+                                    <option value="Planning">
+                                        Planning & Consultation
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                                @if(
+                                    contactForm.controls.projectType.touched &&
+                                    contactForm.controls.projectType.invalid
+                                ){
+
+                                    <small class="error">
+                                        Please select a project type.
+                                    </small>
+
+                                }
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-field">
+
+                            <label for="location">
+                                Project Location
+                            </label>
+
+                            <input
+                                id="location"
+                                type="text"
+                                formControlName="location"
+                                placeholder="City / Location">
+
+                        </div>
+
+                        <div class="form-field">
+
+                            <label for="message">
+                                Tell us about your project *
+                            </label>
+
+                            <textarea
+                                id="message"
+                                rows="7"
+                                formControlName="message"
+                                placeholder="Share your ideas, requirements and what you want to create.">
+                            </textarea>
+
+                            @if(
+                                contactForm.controls.message.touched &&
+                                contactForm.controls.message.invalid
+                            ){
+
+                                <small class="error">
+                                    Please provide at least 20 characters about your project.
+                                </small>
+
+                            }
+
+                        </div>
+
+                        <button
+                            class="submit-button"
+                            type="submit">
+
+                            Send Enquiry
+
+                        </button>
+
+                    </form>
+
+                }
+
+                @else{
+
+                    <div class="success-state">
+
+                        <p class="eyebrow">
+                            Thank You
+                        </p>
+
+                        <h2>
+                            Your enquiry is ready.
+                        </h2>
+
+                        <p>
+                            The form is working correctly. We will connect it
+                            to the final submission method before deployment.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="reset-button"
+                            (click)="resetForm()">
+
+                            Send Another Enquiry
+
+                        </button>
+
+                    </div>
+
+                }
+
+            </div>
+
+        </div>
+
+    </app-container>
+
+</section>

@@ -4,6 +4,8 @@ import { Home } from './pages/home/home';
 import { Projects } from './pages/projects/projects';
 import { About } from './pages/about/about';
 import { Contact } from './pages/contact/contact';
+import { Service } from './pages/service/service';
+
 
 export const routes: Routes = [
 
@@ -25,6 +27,11 @@ export const routes: Routes = [
     },
 
     {
+        path:'services',
+        component: Service
+    },
+
+    {
         path:'about',
         component:About
     },
@@ -34,9 +41,11 @@ export const routes: Routes = [
         component:Contact
     },
 
-    {
-        path:'**',
-        redirectTo:''
-    }
-
+   {
+    path: '**',
+    loadComponent: () =>
+        import('./pages/not-found/not-found')
+            .then(m => m.NotFound)
+}
+   
 ];
