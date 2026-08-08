@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { Button } from '../../../../shared/ui/button/button';
 import { Container } from '../../../../shared/ui/container/container';
 import { AnimationService } from '../../../../core/services/animation';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ selector:'app-hero',
 
 standalone:true,
 
-imports:[Button, Container],
+imports:[Button, Container, RouterLink],
 
 templateUrl:'./hero.html',
 

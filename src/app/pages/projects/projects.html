@@ -1,1 +1,84 @@
-<p>projects works!</p>
+<section class="projects-page section">
+
+    <app-container>
+
+        <app-section-title
+            [content]="sectionTitle">
+        </app-section-title>
+
+        <app-divider
+            variant="short">
+        </app-divider>
+
+        <div class="projects-toolbar">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    placeholder="Search by project name or location..."
+                    (input)="onSearch($event)">
+
+            </div>
+
+            <div class="category-filter">
+
+                @for(category of categories; track category){
+
+                    <button
+
+                        type="button"
+
+                        [class.active]="selectedCategory() === category"
+
+                        (click)="selectCategory(category)">
+
+                        {{ category }}
+
+                    </button>
+
+                }
+
+            </div>
+
+        </div>
+
+        @if(filteredProjects().length){
+
+            <div class="projects-grid">
+
+                @for(project of filteredProjects(); track project.id){
+
+                    <app-project-card
+                        [project]="project">
+                    </app-project-card>
+
+                }
+
+            </div>
+
+        }
+
+        @else{
+
+            <div class="empty-state">
+
+                <h3>
+
+                    No projects found
+
+                </h3>
+
+                <p>
+
+                    Try changing the search text or selecting another category.
+
+                </p>
+
+            </div>
+
+        }
+
+    </app-container>
+
+</section>

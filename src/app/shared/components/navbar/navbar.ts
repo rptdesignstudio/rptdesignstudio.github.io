@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { NAVIGATION_ITEMS } from '../../../core/data/navigation.data';
@@ -18,14 +18,15 @@ import { Container } from '../../ui/container/container';
 export class Navbar {
 
   navigationItems = NAVIGATION_ITEMS;
+ 
+  isScrolled = signal(false);
 
-  isScrolled = false;
+ @HostListener('window:scroll')
+  onScroll(): void {
 
-  @HostListener('window:scroll')
-  onWindowScroll(): void {
-
-    this.isScrolled = window.scrollY > 80;
+    this.isScrolled.set(window.scrollY > 30);
 
   }
+
 
 }

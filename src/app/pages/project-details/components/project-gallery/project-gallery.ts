@@ -1,10 +1,11 @@
-import { Component, input, signal } from '@angular/core';
+import { AfterViewInit, Component, inject, input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Project } from '../../../../core/models/project.model';
 
 import { Container } from '../../../../shared/ui/container/container';
 import { Lightbox } from '../../../../shared/ui/lightbox/lightbox';
+import { AnimationService } from '../../../../core/services/animation';
 
 @Component({
   selector: 'app-project-gallery',
@@ -17,7 +18,9 @@ import { Lightbox } from '../../../../shared/ui/lightbox/lightbox';
   templateUrl: './project-gallery.html',
   styleUrl: './project-gallery.scss'
 })
-export class ProjectGalleryComponent {
+export class ProjectGalleryComponent implements AfterViewInit {
+
+  private animation = inject(AnimationService);
 
   project = input.required<Project>();
 
@@ -38,5 +41,20 @@ export class ProjectGalleryComponent {
     this.lightboxVisible.set(false);
 
   }
+
+   ngAfterViewInit(): void {
+
+    this.animation.reveal('.project-gallery');
+
+    this.animation.stagger(
+
+      '.gallery-item',
+
+      '.gallery-grid'
+
+    );
+
+  }
+
 
 }
